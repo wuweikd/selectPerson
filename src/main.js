@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import selectPeople from './lib/index'
 Vue.config.productionTip = false
-
+Vue.use(selectPeople)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
