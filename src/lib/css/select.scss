@@ -1,0 +1,273 @@
+.select {
+  padding-top: 90px;
+  .search {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 14px;
+    background-color: #F1F2F5;
+    padding: 10px 15px;
+    .search-img {
+      position: absolute;
+      margin-top: 8px;
+      margin-left: calc(50% - 50px);
+    }
+    .search-img2 {
+      position: absolute;
+      margin-top: 8px;
+      margin-left: 10px;
+    }
+    .inputer {
+      width: calc(100% - 40px);
+      border-radius: 15px;
+      height: 30px;
+      line-height: 28px;
+      padding-left: 30px;
+      padding-right: 15px;
+      background-color: #FFFFFF;
+    }
+    .inputer2 {
+      width: 100%;
+      text-align: center;
+      padding-left: 15px;
+    }
+    .clear-icon {
+      position: absolute;
+      margin-top: 8px;
+      margin-left: -20px;
+    }
+    .cancel-text {
+      line-height: 30px;
+      float: right;
+      color: #597EF7;
+    }
+  }
+  /* 搜索列表 */
+  .search-list {
+    margin-top: -40px;
+    padding-left: 15px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    .person {
+      padding: 10px 15px 10px 0;
+      border-bottom: 1px solid #EEEEEE;
+      .person-img {
+        margin-left: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+        border-radius: 20px;
+      }
+      .person-message {
+        vertical-align: middle;
+        display: inline-block;
+        .person-name {
+          font-size: 16px;
+          line-height: 24px;
+          color: #000000;
+        }
+        .person-job {
+          font-size: 14px;
+          color: #888888;
+          max-width: 220px;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  /* 已选列表 */
+  .chosed-list {
+    margin-top: -90px;
+    padding-left: 15px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    .person {
+      padding: 10px 15px 10px 0;
+      border-bottom: 1px solid #EEEEEE;
+      .person-img {
+        margin-left: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+        border-radius: 20px;
+      }
+      .person-message {
+        vertical-align: middle;
+        display: inline-block;
+        .person-name {
+          font-size: 16px;
+          line-height: 24px;
+          color: #000000;
+        }
+        .person-job {
+          font-size: 14px;
+          color: #888888;
+          max-width: 220px;
+        }
+      }
+      .remove-img {
+        float: right;
+        margin-top: 8px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  /* 面包屑导航 */
+  .header {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 10px 0 5px 5px;
+    height: 45px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    .bread-crumb {
+      display: inline-block;
+      border-radius: 13px;
+      border: 1px #597EF7 solid;
+      padding: 0 5px 0px 5px;
+      line-height: 24px;
+      color: #597EF7;
+      font-size: 12px;
+      margin-left: 5px;
+      white-space: nowrap;
+      margin-bottom: 5px;
+      &:not(:first-child) {
+        /*&::before {*/
+        /*content: '＜';*/
+        /*font-weight: 900;*/
+        /*}*/
+      }
+      &:last-child {
+        font-size: 14px;
+        color: #000000;
+        border: none;
+        /*&::before {*/
+        /*content: '';*/
+        /*}*/
+      }
+    }
+  }
+  /* 全选 */
+  .chose-all {
+    background-color: #FFFFFF;
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    .chose-all-in {
+      padding: 10px 0;
+      font-size: 16px;
+      color: #000000;
+      border-bottom: 1px solid #EEEEEE;
+      border-top: 1px solid #EEEEEE;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+  /* 内容 */
+  .body {
+    .item {
+      padding-left: 15px;
+      /*background-color: red;*/
+      background-color: #FFFFFF;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      /* 人员列表 */
+      .person {
+        padding: 10px 15px 10px 0;
+        border-bottom: 1px solid #EEEEEE;
+        .person-img {
+          margin-left: 10px;
+          margin-right: 10px;
+          vertical-align: middle;
+          border-radius: 20px;
+        }
+        .person-message {
+          vertical-align: middle;
+          display: inline-block;
+          .person-name {
+            font-size: 16px;
+            line-height: 24px;
+            color: #000000;
+          }
+          .person-job {
+            font-size: 14px;
+            color: #888888;
+            max-width: 220px;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      /* 部门列表 */
+      .catalog {
+        padding: 10px 15px 10px 0;
+        font-size: 16px;
+        line-height: 26px;
+        border-bottom: 1px solid #EEEEEE;
+        vertical-align: middle;
+        .number {
+          float: right;
+          font-size: 16px;
+          color: #888888;
+        }
+        .right-img {
+          float: right;
+          margin-top: 6px;
+          margin-left: 5px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  /* 按钮 */
+  .footer {
+    .fill-div {
+      height: 45px;
+    }
+    .button {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0;
+      .button-number {
+        display: inline-block;
+        width: calc(100% - 125px);
+        vertical-align: middle;
+        background-color: #FFFFFF;
+        line-height: 45px;
+        height: 45px;
+        font-size: 16px;
+        border-top: 1px;
+        padding-left: 20px;
+        .number {
+          font-size: 18px;
+          margin-left: 5px;
+          margin-right: 5px;
+          color: #597EF7;
+        }
+      }
+      .button-confirm {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 45px;
+        height: 45px;
+        width: 125px;
+        font-size: 16px;
+        color: #FFFFFF;
+        text-align: center;
+        background: -webkit-linear-gradient(left, #597EF7, #2F54EB); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(right, #597EF7, #2F54EB); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(right, #597EF7, #2F54EB); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to right, #597EF7, #2F54EB);  /* 标准的语法（必须放在最后 */
+      }
+    }
+  }
+}
