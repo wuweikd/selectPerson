@@ -1,9 +1,9 @@
 {
   "name": "select-person",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "用于医联体选人",
   "author": "wuwei",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -68,6 +68,11 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
+  "keywords": [
+    "vue",
+    "select-peron",
+    "移动端选人"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",

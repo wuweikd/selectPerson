@@ -6,6 +6,7 @@ import router from './router'
 import selectPeople from './lib/index'
 Vue.config.productionTip = false
 Vue.use(selectPeople)
+Vue.prototype.$needGoOut = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

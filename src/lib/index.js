@@ -1,16 +1,19 @@
-import selectPeople from './selectPeople'
+import selectPeople from './selectPerson'
 import Vue from 'vue'
 
 let ShowSelect = Vue.extend(selectPeople)
 const select = {
-  install (Vue, options) {
+  install () {
     let instance
     Vue.prototype.$selectPeople = function (options) {
+      if (!options.bandId) {
+        alert('你需要参数bandId为当前页面的id')
+      }
       instance = new ShowSelect({
         data: options
       })
       instance.vm = instance.$mount()
-      document.getElementById('selectPerson').appendChild(instance.vm.$el)
+      document.getElementById(options.bandId).appendChild(instance.vm.$el)
       return instance.vm
     }
   }

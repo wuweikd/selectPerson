@@ -116,10 +116,11 @@
   }
   /* 面包屑导航 */
   .header {
+    //background-color: lavenderblush;
+    background-color: #FFFFFF;
     position: fixed;
     top: 50px;
     width: 100%;
-    background-color: #FFFFFF;
     padding: 10px 0 5px 5px;
     height: 45px;
     white-space: nowrap;
@@ -154,16 +155,19 @@
   /* 全选 */
   .chose-all {
     background-color: #FFFFFF;
-    padding-left: 15px;
-    margin-top: 10px;
+    vertical-align: middle;
+    margin-left: 15px;
     margin-bottom: -10px;
     .chose-all-in {
       padding: 10px 0;
       font-size: 16px;
       color: #000000;
       border-bottom: 1px solid #EEEEEE;
-      border-top: 1px solid #EEEEEE;
+      .vm {
+        vertical-align: middle;
+      }
       img {
+        vertical-align: middle;
         margin-right: 10px;
       }
     }
@@ -267,6 +271,20 @@
         background: -o-linear-gradient(right, #597EF7, #2F54EB); /* Opera 11.1 - 12.0 */
         background: -moz-linear-gradient(right, #597EF7, #2F54EB); /* Firefox 3.6 - 15 */
         background: linear-gradient(to right, #597EF7, #2F54EB);  /* 标准的语法（必须放在最后 */
+      }
+      .button-confirm2 {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 45px;
+        height: 45px;
+        width: 125px;
+        font-size: 16px;
+        color: #FFFFFF;
+        text-align: center;
+        background: -webkit-linear-gradient(left, #bfbfbf, #b2b2b2); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(right, #bfbfbf, #b2b2b2); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(right, #bfbfbf, #b2b2b2); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to right, #bfbfbf, #b2b2b2);  /* 标准的语法（必须放在最后 */
       }
     }
   }
