@@ -8,7 +8,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/select',
+      path: '/example',
       name: 'example',
       component: example
     },

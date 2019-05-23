@@ -1,5 +1,25 @@
 .select {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  background-color: #f5f5f5;
   padding-top: 90px;
+  img {
+    vertical-align: middle;
+  }
+  input {
+    border: none;
+  }
+  .width-14 {
+    width: 14px;
+  }
+  .width-24 {
+    width: 24px;
+  }
+  .width-40 {
+    width: 40px;
+  }
   .search {
     position: fixed;
     top: 0;
@@ -156,7 +176,7 @@
   .chose-all {
     background-color: #FFFFFF;
     vertical-align: middle;
-    margin-left: 15px;
+    padding-left: 15px;
     margin-bottom: -10px;
     .chose-all-in {
       padding: 10px 0;
@@ -224,6 +244,7 @@
           float: right;
           margin-top: 6px;
           margin-left: 5px;
+          height: 14px;
         }
         &:last-child {
           border-bottom: none;
@@ -234,6 +255,7 @@
   /* 按钮 */
   .footer {
     .fill-div {
+      opacity: 0;
       height: 45px;
     }
     .button {

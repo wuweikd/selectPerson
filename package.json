@@ -1,7 +1,7 @@
 {
   "name": "select-person",
-  "version": "1.1.1",
-  "description": "用于医联体选人",
+  "version": "1.2.1",
+  "description": "用于移动端选人的控件",
   "author": "wuwei",
   "private": false,
   "scripts": {

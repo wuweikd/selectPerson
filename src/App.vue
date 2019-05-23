@@ -12,6 +12,7 @@ export default {
 
 <style>
 #app {
+  height: 100%;
 }
 * {
   box-sizing: border-box;

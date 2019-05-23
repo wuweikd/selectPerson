@@ -1,6 +1,6 @@
 # select-person
 
-> 用于医联体选人
+> 用于移动端选人的控件
 
 ## 使用
 
@@ -13,43 +13,60 @@ Vue.use(selectPerson)
 ```
 
 ## 用法
-#####新建一个承载选人控件的页面
+####新建一个承载选人控件的页面，业务页面跳转到此页面即可
+###### 解释：由于需要监听路由的返回事件，所以挂载的选人页面只能挂载在当前页面的`<div id="selectPerson"></div>`上面
 ```vue
+<style scoped>
+</style>
 <template>
-  <div id="toSelectPerson">
-  </div>
+  <div id="selectPerson"></div>
 </template>
 
 <script>
+const baseURL = window.location.protocol + '//' + window.location.host
 export default {
-  name: 'to-select-person',
+  name: 'selectPerson',
   data () {
     return {
-      needGoBack: true // 控制是否跳出选人页面
+      needGoBack: false,
+      isMultiple: true,
+      pathList: [{
+        orgName: '组织架构',
+        orgId: ''
+      }],
+      chosedPersonList: [],
+      allianceId: '',
+      tenantId: '',
+      getListUrl: baseURL + '/mwp/orgStructure/api/cloudOrgStructure/selectEmp/mobile/emp',
+      searchUrl: baseURL + '/mwp/orgStructure/api/cloudOrgStructure/selectEmp/mobile/emp/search'
     }
   },
   methods: {
     initSelect () {
       let _this = this
       this.$selectPeople({
-        bandId: 'toSelectPerson',
+        bandId: 'selectPerson', // 绑定当前页面的id
+        token: '请求的token',
+        allianceId: _this.allianceId,
+        tenantId: _this.tenantId,
+        getListUrl: _this.getListUrl,
+        searchUrl: _this.searchUrl,
+        isMultiple: _this.isMultiple,
+        pathList: _this.pathList,
+        chosedPersonList: _this.chosedPersonList, // 已经选中的人员列表
         choseEvent: (person) => {
-          console.log(person)
+          sessionStorage.setItem('selectPerson', JSON.stringify(person))
         },
-        goBackEvent: (go) => { // 照着写
-          if (go) {
-            _this.needGoBack = true
-          } else {
-            _this.needGoBack = false
-          }
+        goBackEvent: (go) => {
+           _this.needGoBack = go
         }
       })
     }
   },
   mounted () {
-    this.initSelect() // 照着写
+    this.initSelect()
   },
-  beforeRouteLeave (to, from, next) { // 照着写
+  beforeRouteLeave (to, from, next) {
     if (this.needGoBack) {
       next()
     } else {
@@ -64,10 +81,11 @@ export default {
 |构造参数  | 类型|必填 | 说明 |默认|
 | --- | --- | --- | --- |---|
 | bandId | String | true| 当前页面的id|无|
+| token | String | true| 请求接口的token|无|
 | choseEvent | Function | true| 选择人员的回调,参数为：人员|-|
 | goBackEvent | Function | true| 返回事件的回调，参数为：是否可以退出|-|
-|getListUrl|String|false|查询列表的Url|https://mock.mhealth100.com/mock/215/api/mwpAlliance/getChildByEmpModel|
-|searchUrl|String|false|搜索的Url|您的域名+mwp/managementPlatform/api/mwpAlliance/searchChildByEmpModel|
+|getListUrl|String|true|查询列表的Url|组织架构的地址|
+|searchUrl|String|true|搜索的Url|组织架构的地址|
 | allianceId | String | false | 查询指定医联体信息 | ''|
 | tenantId | String | false | 查询指定医院信息|''|
 | isMultiple | Boolean | false| 是否多选|false|
