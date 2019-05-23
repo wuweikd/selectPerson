@@ -110,4 +110,4 @@ export default {
 }
 ```
 > 示例图片
-![Image text](https://raw.githubusercontent.com/wuweikd/selectPerson/master/%E7%A4%BA%E4%BE%8B2.png)
+![Image text](./static/示例.png)
