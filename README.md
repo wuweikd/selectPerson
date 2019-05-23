@@ -13,7 +13,7 @@ Vue.use(selectPerson)
 ```
 
 ## 用法
-####新建一个承载选人控件的页面，业务页面跳转到此页面即可
+#### 新建一个承载选人控件的页面，业务页面跳转到此页面即可
 ###### 解释：由于需要监听路由的返回事件，所以挂载的选人页面只能挂载在当前页面的`<div id="selectPerson"></div>`上面
 ```vue
 <style scoped>
@@ -77,7 +77,8 @@ export default {
 </script>
 
 ```
-#####参数
+##### 参数
+
 |构造参数  | 类型|必填 | 说明 |默认|
 | --- | --- | --- | --- |---|
 | bandId | String | true| 当前页面的id|无|
@@ -92,8 +93,7 @@ export default {
 | pathList | Array | false| 第一层级面包屑|pathList: [{orgName: '组织架构',orgId: ''}]|
 | chosedPersonList | Array | false| 当前已选人员|[]|
 
-#####说明
-后台返回的数据结构需要为以下结构
+##### 后台：后台返回的数据结构需要为以下结构
 ```json
 
 {"resultData":
